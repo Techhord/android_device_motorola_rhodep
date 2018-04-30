@@ -118,5 +118,8 @@ TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
 # Treble
 BOARD_VNDK_VERSION := current
 
+# Verified Boot
+BOARD_AVB_ENABLE := true
+
 # Inherit the proprietary files
 include vendor/motorola/rhodep/BoardConfigVendor.mk
