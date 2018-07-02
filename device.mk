@@ -95,7 +95,8 @@ PRODUCT_CHARACTERISTICS := default
 
 # Ramdisk
 PRODUCT_PACKAGES += \
-    fstab.qcom
+    fstab.qcom \
+    init.recovery.qcom.rc
 
 # Screen density
 TARGET_SCREEN_HEIGHT := 2400
