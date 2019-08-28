@@ -46,6 +46,10 @@ PRODUCT_PACKAGES += \
     checkpoint_gc \
     otapreopt_script
 
+# ANT+
+PRODUCT_PACKAGES += \
+    AntHalService
+
 # Bluetooth
 PRODUCT_PACKAGES += \
    BluetoothQti
