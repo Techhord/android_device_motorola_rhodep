@@ -102,5 +102,9 @@ TARGET_SCREEN_DENSITY := 440
 # Telephony
 TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
 
+# Treble
+BOARD_VNDK_RUNTIME_DISABLE := true
+BOARD_VNDK_VERSION := current
+
 # Inherit the proprietary files
 include vendor/motorola/rhodep/BoardConfigVendor.mk
