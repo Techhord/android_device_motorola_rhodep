@@ -21,6 +21,17 @@ TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := generic
 TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a75
 
+# A/B
+AB_OTA_UPDATER := true
+
+AB_OTA_PARTITIONS += \
+    boot \
+    dtbo \
+    product \
+    system \
+    system_ext \
+    vendor
+
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := rhodep
 TARGET_NO_BOOTLOADER := true
@@ -48,6 +59,31 @@ BOARD_KERNEL_CMDLINE += service_locator.enable=1
 BOARD_KERNEL_CMDLINE += androidboot.usbcontroller=a600000.dwc3
 BOARD_KERNEL_CMDLINE += swiotlb=2048 cgroup.memory=nokmem,nosocket
 BOARD_KERNEL_CMDLINE += loop.max_part=7
+
+# Partitions - Metadata
+BOARD_USES_METADATA_PARTITION := true
+BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := f2fs
+BOARD_SYSTEM_EXTIMAGE_FILE_SYSTEM_TYPE := ext4
+# Partitions - Boot
+BOARD_BOOTIMAGE_PARTITION_SIZE := 100663296
+BOARD_FLASH_BLOCK_SIZE := 262144 # (BOARD_KERNEL_PAGESIZE * 64)
+# Partitions - Dtbo
+BOARD_DTBOIMG_PARTITION_SIZE := 25165824
+# Partitions - Vendor
+BOARD_VENDOR_BOOTIMAGE_PARTITION_SIZE := 100663296
+BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
+# Partitions - Super
+BOARD_SUPER_PARTITION_GROUPS := motorola_dynamic_partitions
+BOARD_SUPER_PARTITION_SIZE := 9126805504 # TODO: Fix hardcoded value
+BOARD_SYSTEMIMAGE_FILE_SYSTEM_TYPE := ext4
+# Partitions - Dynamic - Motorola
+BOARD_MOTOROLA_DYNAMIC_PARTITIONS_PARTITION_LIST := system system_ext product vendor
+BOARD_MOTOROLA_DYNAMIC_PARTITIONS_SIZE := 9122611200 # TODO: Fix hardcoded value
+BOARD_PRODUCTIMAGE_FILE_SYSTEM_TYPE := ext4
+# Out dirs
+TARGET_COPY_OUT_PRODUCT := product
+TARGET_COPY_OUT_SYSTEM_EXT := system_ext
+TARGET_COPY_OUT_VENDOR := vendor
 
 # Platform
 TARGET_BOARD_PLATFORM := holi
