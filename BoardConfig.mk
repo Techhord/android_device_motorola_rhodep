@@ -102,6 +102,9 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 # Screen density
 TARGET_SCREEN_DENSITY := 440
 
+# SELinux
+BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+
 # Telephony
 TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
 
