@@ -60,6 +60,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/gpio-keys.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/gpio-keys.kl
 
+# Net
+PRODUCT_PACKAGES += \
+    android.system.net.netd@1.0 \
+    netutils-wrapper-1.0
+
 # Overlays
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
