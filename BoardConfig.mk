@@ -32,6 +32,10 @@ AB_OTA_PARTITIONS += \
     system_ext \
     vendor
 
+# Audio
+USE_CUSTOM_AUDIO_POLICY := 1
+USE_XML_AUDIO_POLICY_CONF := 1
+
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := rhodep
 TARGET_NO_BOOTLOADER := true
