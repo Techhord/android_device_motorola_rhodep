@@ -51,6 +51,11 @@ PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
 PRODUCT_PACKAGES += \
     fastbootd
 
+# IMS
+PRODUCT_PACKAGES += \
+    ims-ext-common \
+    ims_ext_common.xml
+
 # HIDL
 PRODUCT_PACKAGES += \
     android.hidl.manager@1.0 \
