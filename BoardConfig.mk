@@ -53,5 +53,8 @@ BOARD_KERNEL_CMDLINE += loop.max_part=7
 TARGET_BOARD_PLATFORM := holi
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno619
 
+# Screen density
+TARGET_SCREEN_DENSITY := 440
+
 # Inherit the proprietary files
 include vendor/motorola/rhodep/BoardConfigVendor.mk
