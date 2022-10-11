@@ -43,6 +43,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
 
+# HIDL
+PRODUCT_PACKAGES += \
+    android.hidl.manager@1.0 \
+    android.hidl.base@1.0
+
 # Overlays
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
