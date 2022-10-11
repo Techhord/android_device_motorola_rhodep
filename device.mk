@@ -10,9 +10,10 @@ $(call inherit-product, vendor/motorola/rhodep/rhodep-vendor.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.2-impl \
-    android.hardware.boot@1.2-impl.recovery \
-    android.hardware.boot@1.2-service \
+    android.hardware.boot@1.1-impl-qti \
+    android.hardware.boot@1.1-impl-qti.recovery \
+    android.hardware.boot@1.1-service \
+    bootctrl.lito \
     bootctrl.lito.recovery
 
 PRODUCT_PACKAGES_DEBUG += \
