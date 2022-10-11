@@ -12,7 +12,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.2-impl \
     android.hardware.boot@1.2-impl.recovery \
-    android.hardware.boot@1.2-service
+    android.hardware.boot@1.2-service \
+    bootctrl.lito.recovery
+
+PRODUCT_PACKAGES_DEBUG += \
+    bootctl
 
 PRODUCT_PACKAGES += \
     update_engine \
