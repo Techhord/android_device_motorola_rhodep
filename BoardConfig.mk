@@ -95,5 +95,8 @@ TARGET_BOARD_PLATFORM_GPU := qcom-adreno619
 # Screen density
 TARGET_SCREEN_DENSITY := 440
 
+# Telephony
+TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
+
 # Inherit the proprietary files
 include vendor/motorola/rhodep/BoardConfigVendor.mk
