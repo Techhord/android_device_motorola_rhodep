@@ -43,6 +43,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
 
+# fastbootd
+PRODUCT_PACKAGES += \
+    fastbootd
+
 # HIDL
 PRODUCT_PACKAGES += \
     android.hidl.manager@1.0 \
