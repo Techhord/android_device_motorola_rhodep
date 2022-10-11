@@ -25,6 +25,30 @@ TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a75
 TARGET_BOOTLOADER_BOARD_NAME := rhodep
 TARGET_NO_BOOTLOADER := true
 
+# Kernel Setup
+BOARD_KERNEL_BASE := 0x00000000
+BOARD_KERNEL_PAGESIZE :=  4096
+BOARD_KERNEL_IMAGE_NAME := Image
+BOARD_KERNEL_SEPARATED_DTBO := true
+# Include dtb
+BOARD_INCLUDE_DTB_IN_BOOTIMG := true
+# Kernel Header
+BOARD_BOOT_HEADER_VERSION := 3
+BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
+# Target Kernel Path
+TARGET_KERNEL_CONFIG := vendor/rhodep-perf_defconfig
+TARGET_KERNEL_SOURCE := kernel/motorola/rhodep
+# Additional Flags
+BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom
+BOARD_KERNEL_CMDLINE += androidboot.console=ttyMSM0 androidboot.memcg=1
+BOARD_KERNEL_CMDLINE += lpm_levels.sleep_disabled=1
+BOARD_KERNEL_CMDLINE += video=vfb:640x400,bpp=32,memsize=3072000
+BOARD_KERNEL_CMDLINE += msm_rtb.filter=0x237
+BOARD_KERNEL_CMDLINE += service_locator.enable=1
+BOARD_KERNEL_CMDLINE += androidboot.usbcontroller=a600000.dwc3
+BOARD_KERNEL_CMDLINE += swiotlb=2048 cgroup.memory=nokmem,nosocket
+BOARD_KERNEL_CMDLINE += loop.max_part=7
+
 # Platform
 TARGET_BOARD_PLATFORM := holi
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno619
