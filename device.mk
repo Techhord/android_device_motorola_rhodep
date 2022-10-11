@@ -58,6 +58,10 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 # Product characteristics
 PRODUCT_CHARACTERISTICS := default
 
+# Ramdisk
+PRODUCT_PACKAGES += \
+    fstab.qcom
+
 # Screen density
 TARGET_SCREEN_HEIGHT := 2400
 TARGET_SCREEN_WIDTH := 1080

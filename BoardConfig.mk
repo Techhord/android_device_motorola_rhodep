@@ -96,6 +96,9 @@ TARGET_COPY_OUT_VENDOR := vendor
 TARGET_BOARD_PLATFORM := holi
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno619
 
+# Recovery
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
+
 # Screen density
 TARGET_SCREEN_DENSITY := 440
 
