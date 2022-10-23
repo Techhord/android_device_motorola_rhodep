@@ -126,6 +126,10 @@ PRODUCT_PACKAGES += \
     fstab.qcom \
     init.recovery.qcom.rc
 
+# Sensors
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf 
+
 # Screen density
 TARGET_SCREEN_HEIGHT := 2400
 TARGET_SCREEN_WIDTH := 1080
